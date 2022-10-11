@@ -5,27 +5,87 @@
     <meta
       name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="theme-color" content="#000000" />
-    <link href="/output.css" rel="stylesheet">
+    <link href="./output.css" rel="stylesheet">
     <title>Cat</title>
     <script type="text/javascript" src="cat.js"></script>
   </head>
-  <body>
-    <div class="container">
-      <div class="grid grid-cols-3 pt-5">
+  <body class="bg-paisaje bg-no-repeat">
+    <div class="container   font-mono ">
 
-        <div class= "col-span-1 bg- color- red 400">
-          <h1 class="text-3xl font-bold underline">
-            Hello world!
-          </h1>
+      <div class="grid grid-cols-3 px-4 py-4"> 
+        
+          <div class= "col-span-1">
+            <label for="name" class="form-label ">Energia:</label>
+            <p1>100</p1>
+          </div>
+
+          <div class= "col-span-1">
+            <label for="name" class="form-label">Hambre:</label>
+            <p2>100</p2>
+            
+          </div>
+
+          <div class= "col-span-1">
+            <label for="name" class="form-label">Sueño:</label>
+            <p3>100</p3>
+          </div>
+
+      </div>
+
+      <div class="grid grid-cols-3 ">
+
+        <div class= "col-span-1 grid grid-rows-3  px-4 pb-8 ">
+            <div>
+              <button  class = "rounded  bg-lime-400 px-4 py-2" onclick="search()" class="btn ">Dormir</button>
+            </div>
+
+            <div>
+            <button class = "rounded  bg-lime-400 px-4 py-2" onclick="clearForm()" class="btn btn-secondary">Comer</button>
+            </div>
+        
+        </div>
+        
+
+        <div class= "col-span-1">
+          <div class="mb-3   mt-5 mb-8">
+            <label for="name" class="form-label">Cual es mi nombre?:</label>
+            <input type="text" id="name" class="form-control" placeholder="Escribe el nombre aqui">
+          </div>
+          <div>
+            <img src="pngwing.com.png" alt="gato" class = "my-20">
+          </div>
+
+          <div class="grid grid-cols-3 px-4 py-4"> 
+      
+            <div class= "col-span-1">
+              <img src="comiendo.gif" alt="gato-comiendo">
+            </div>
+  
+            <div class= "col-span-1">
+             <img src="dormir.png" alt="gato-durmiendo">
+              
+            </div>
+  
+            <div class= "col-span-1">
+              <img src="jugando.gif" alt="gato-jugando">
+            </div>
+
+          </div>
+
         </div>
 
-        <div class= "col-span-1 bg- color- orange 400">
-          gato
+
+        <div class= "col-span-1 grid grid-rows-3  px-4 pb-8 ">
+        <div>
+          <button  class = "rounded  bg-lime-400 px-4 py-2" onclick="search()" class="btn ">Dormir</button>
         </div>
 
-
-      <div class= "col-span-1 bg- color- yellow 400">
-        hola
+        <div>
+        <button class = "rounded  bg-lime-400 px-4 py-2" onclick="clearForm()" class="btn btn-secondary">Comer</button>
+        </div>
+              
+          
+               
       </div>
 
 
