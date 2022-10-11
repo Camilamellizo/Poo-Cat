@@ -14,27 +14,27 @@
   <body class="bg-paisaje bg-no-repeat bg-cover">
     <div class="container   font-mono ">
 
-      <div class=" flex flex-row-1 px-4 py-4  justify-center" id="oculto">       
+      <div class=" flex flex-row-1 px-4 py-4  justify-center">       
         
-        <label for="name" class="form-label ">Energia:</label>
-        <p1 class="text-amber-600 mr-4">100</p1>
-        <p>|</p>
-        <label for="name" class="form-label ml-4">Hambre:</label>
-        <p2 class="text-amber-600 mr-4">100</p2>
-        <p>|</p>
-        <label for="name" class="form-label ml-4 ">Sueño:</label>
-        <p3 class="text-amber-600">100</p3>
+        <label for="name" class="form-label " hidden id="energy">Energia:</label>
+        <p1 class="text-amber-600 mr-4" hidden id="number1">100</p1>
+        <p hidden id="separador1">|</p>
+        <label for="name" class="form-label ml-4" hidden id="hungry">Hambre:</label>
+        <p2 class="text-amber-600 mr-4" hidden id="number2" >100</p2>
+        <p hidden id="separador2" >|</p>
+        <label for="name" class="form-label ml-4 " hidden id="sleep">Sueño:</label>
+        <p3 class="text-amber-600" hidden id="number3">100</p3>
       </div>
 
-      <div class="grid grid-cols-3  justify-items-center " id="oculto">
+      <div class="grid grid-cols-3  justify-items-center " >
 
         <div class= "col-span-1 grid grid-rows-3  px-4 pb-8 ">
             <div>
-              <button  class = "rounded  bg-lime-400 px-4 py-2" onclick="search()" class="btn ">Dormir</button>
+              <button  class = "rounded  bg-lime-400 px-4 py-2" onclick="search()" class="btn " hidden id="button_sleep">Dormir</button>
             </div>
 
             <div>
-            <button class = "rounded  bg-lime-400 px-4 py-2" onclick="clearForm()" class="btn btn-secondary">Comer</button>
+            <button class = "rounded  bg-lime-400 px-4 py-2" onclick="clearForm()" class="btn btn-secondary" hidden id="button_eat">Comer</button>
             </div>
         
         </div>
@@ -47,25 +47,25 @@
             <button onclick="init()" class=" hover:bg-blue-300  px-4 py-2 rounded underline decoration-wavy ">Iniciar</button>
           </div>
           <div>
-            <p class="rounded underline decoration-wavy capitalize text-2xl" id="text-name">name</p>
+            <p class="rounded underline decoration-wavy capitalize text-2xl" hidden id="text-name">name</p>
           </div>
           
-          <div id="oculto">
+          <div>
             <img src="pngwing.com.png" alt="gato" class = "my-4 " >
           </div>
 
-          <div class="grid grid-cols-3 px-4 py-4 " id="oculto"> 
+          <div class="grid grid-cols-3 px-4 py-4"> 
       
-            <div class= "col-span-1">
+            <div class= "col-span-1" hidden id="cat-eat">
               <img src="comiendo.gif" alt="gato-comiendo">
             </div>
   
-            <div class= "col-span-1">
+            <div class= "col-span-1" hidden id="cat-sleep">
              <img src="dormir.gif" alt="gato-durmiendo">
               
             </div>
   
-            <div class= "col-span-1">
+            <div class= "col-span-1" hidden id="cat-play">
               <img src="jugando.gif" alt="gato-jugando">
             </div>
 
@@ -74,18 +74,26 @@
         </div>
 
 
-        <div class= "col-span-1 grid grid-rows-3  px-4 pt-5" id="oculto">
+        <div class= "col-span-1 grid grid-rows-3  px-4 pt-5">
         <div>
-          <button  class = "rounded  bg-lime-400 px-4 py-2" onclick="search()" class="btn ">Dormir</button>
+          <button  class = "rounded  bg-lime-400 px-4 py-2" class="btn " hidden id="button_play">Jugar</button>
         </div>
 
         <div>
-        <button class = "rounded  bg-lime-400 px-4 py-2" onclick="clearForm()" class="btn btn-secondary">Comer</button>
+        <button class = "rounded  bg-lime-400 px-4 py-2" class="btn btn-secondary" hidden id="button_sound">sonidos</button>
         </div>
               
           
                
       </div>
+      
+      <div class=" flex flex-row-1 px-4 py-4">   
+        <div>
+          <button class="underline decoration-dotted" onclick="clean()" hidden id="restablecer">Restablecer</button>
+        </div>
+      
+      </div>
+      
 
 
 
