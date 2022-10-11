@@ -8,31 +8,25 @@
     <link href="./output.css" rel="stylesheet">
     <title>Cat</title>
     <script type="text/javascript" src="cat.js"></script>
+    <script type="text/javascript" src="function.js"></script>
+
   </head>
-  <body class="bg-paisaje bg-no-repeat">
+  <body class="bg-paisaje bg-no-repeat bg-cover">
     <div class="container   font-mono ">
 
-      <div class="grid grid-cols-3 px-4 py-4"> 
+      <div class=" flex flex-row-1 px-4 py-4  justify-center" id="oculto">       
         
-          <div class= "col-span-1">
-            <label for="name" class="form-label ">Energia:</label>
-            <p1>100</p1>
-          </div>
-
-          <div class= "col-span-1">
-            <label for="name" class="form-label">Hambre:</label>
-            <p2>100</p2>
-            
-          </div>
-
-          <div class= "col-span-1">
-            <label for="name" class="form-label">Sueño:</label>
-            <p3>100</p3>
-          </div>
-
+        <label for="name" class="form-label ">Energia:</label>
+        <p1 class="text-amber-600 mr-4">100</p1>
+        <p>|</p>
+        <label for="name" class="form-label ml-4">Hambre:</label>
+        <p2 class="text-amber-600 mr-4">100</p2>
+        <p>|</p>
+        <label for="name" class="form-label ml-4 ">Sueño:</label>
+        <p3 class="text-amber-600">100</p3>
       </div>
 
-      <div class="grid grid-cols-3 ">
+      <div class="grid grid-cols-3  justify-items-center " id="oculto">
 
         <div class= "col-span-1 grid grid-rows-3  px-4 pb-8 ">
             <div>
@@ -46,23 +40,28 @@
         </div>
         
 
-        <div class= "col-span-1">
-          <div class="mb-3   mt-5 mb-8">
+        <div class= "col-span-1  grid justify-items-center">
+          <div class="mt-5 mb-4" id="auth">
             <label for="name" class="form-label">Cual es mi nombre?:</label>
-            <input type="text" id="name" class="form-control" placeholder="Escribe el nombre aqui">
+            <input type="text" id="name" class="form-control" placeholder="Escribe mi nombre ">
+            <button onclick="init()" class=" hover:bg-blue-300  px-4 py-2 rounded underline decoration-wavy ">Iniciar</button>
           </div>
           <div>
-            <img src="pngwing.com.png" alt="gato" class = "my-20">
+            <p class="rounded underline decoration-wavy capitalize text-2xl" id="text-name">name</p>
+          </div>
+          
+          <div id="oculto">
+            <img src="pngwing.com.png" alt="gato" class = "my-4 " >
           </div>
 
-          <div class="grid grid-cols-3 px-4 py-4"> 
+          <div class="grid grid-cols-3 px-4 py-4 " id="oculto"> 
       
             <div class= "col-span-1">
               <img src="comiendo.gif" alt="gato-comiendo">
             </div>
   
             <div class= "col-span-1">
-             <img src="dormir.png" alt="gato-durmiendo">
+             <img src="dormir.gif" alt="gato-durmiendo">
               
             </div>
   
@@ -75,7 +74,7 @@
         </div>
 
 
-        <div class= "col-span-1 grid grid-rows-3  px-4 pb-8 ">
+        <div class= "col-span-1 grid grid-rows-3  px-4 pt-5" id="oculto">
         <div>
           <button  class = "rounded  bg-lime-400 px-4 py-2" onclick="search()" class="btn ">Dormir</button>
         </div>
@@ -92,6 +91,7 @@
 
 
       </div>
+
     </div>  
   </body>
 </html>
