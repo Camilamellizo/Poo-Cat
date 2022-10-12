@@ -10,34 +10,44 @@ class cat {
 
 
     sleep(){
-        if(this.energy <=75 ){            
-            this.energy += 25
-        } 
-        if(this.hungry <=50){
-            this.hungry +=50
-        }      
+        let status = false
+        if (this.energy < 100 && this.energy >= 0) {
+            this.energy += 50  
+            status = true                    
+        }
+        if (this.hungry < 100 && this.hungry >= 0){
+            this.hungry += 50
+            status = true
+        }
+        return status
     }
 
     play(){
-        if (this.energy >= 50) {
-            this.mood = "meow!! Estoy feliz, gracias por jugar conmigo!!"
-            this.energy -= 50
+        let status = false
+
+        if (this.energy <= 100 && this.energy > 0) {
+            this.energy -= 50  
+            status = true      
+        }
+        if (this.hungry < 100 && this.hungry >= 0){
             this.hungry += 50
-        } 
+            status = true
+        }
+        return status
     }
     
     feed(){
-        if (this.hungry <= 60){          
-            this.energy += 25
-            this.hungry -= 50
-          }              
-        }
-    }
-   
-    
-  
- /*  const pablo = new cat
+        let status = false
 
-  console.log(pablo)
-  pablo.play
-  console.log(pablo.energy) */
+        if (this.energy < 100 && this.energy >= 0) {
+            this.energy += 50  
+            status = true
+
+        }
+        if (this.hungry <= 100 && this.hungry > 0){
+            this.hungry -= 50
+            status = true
+        }
+        return status
+    }
+}

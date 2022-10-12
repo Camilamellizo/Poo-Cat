@@ -614,10 +614,6 @@ video {
   margin-bottom: 1rem;
 }
 
-.block {
-  display: block;
-}
-
 .flex {
   display: flex;
 }
