@@ -30,18 +30,18 @@
 
         <div class= "col-span-1 grid grid-rows-3  px-4 pb-8 ">
             <div>
-              <button  class = "rounded  bg-lime-400 px-4 py-2" onclick="search()" class="btn " hidden id="button_sleep">Dormir</button>
+              <button  class = "rounded  bg-lime-400 px-4 py-2" onclick="catsleep()" class="btn " hidden id="button_sleep">Dormir</button>
             </div>
 
             <div>
-            <button class = "rounded  bg-lime-400 px-4 py-2" onclick="clearForm()" class="btn btn-secondary" hidden id="button_eat">Comer</button>
+            <button class = "rounded  bg-lime-400 px-4 py-2" onclick="cateat()" class="btn btn-secondary" hidden id="button_eat">Comer</button>
             </div>
         
         </div>
         
 
         <div class= "col-span-1  grid justify-items-center">
-          <div class="mt-5 mb-4" id="auth">
+          <div class="mt-5 mb-4" id="auth" >
             <label for="name" class="form-label">Cual es mi nombre?:</label>
             <input type="text" id="name" class="form-control" placeholder="Escribe mi nombre ">
             <button onclick="init()" class=" hover:bg-blue-300  px-4 py-2 rounded underline decoration-wavy ">Iniciar</button>
@@ -76,11 +76,11 @@
 
         <div class= "col-span-1 grid grid-rows-3  px-4 pt-5">
         <div>
-          <button  class = "rounded  bg-lime-400 px-4 py-2" class="btn " hidden id="button_play">Jugar</button>
+          <button  class = "rounded  bg-lime-400 px-4 py-2" class="btn " hidden id="button_play" onclick="catPlay()">Jugar</button>
         </div>
 
         <div>
-        <button class = "rounded  bg-lime-400 px-4 py-2" class="btn btn-secondary" hidden id="button_sound">sonidos</button>
+        <button class = "rounded  bg-lime-400 px-4 py-2" class="btn btn-secondary" hidden id="button_sound">About Me:</button>
         </div>
               
           

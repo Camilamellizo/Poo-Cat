@@ -1,7 +1,6 @@
 class cat {
     constructor(name) {
-    this.name = "";
-    this.age = 1;
+    this.name = name;
     this.sound = null
     this.mood = "";
     this.hungry = 0;
@@ -11,42 +10,34 @@ class cat {
 
 
     sleep(){
-        if(dormir == 100){
-            this.energy = 100
-            this.hungry = 100
-        } else {
-            this.energy = 0
-            this.hungry = 100
-             
+        if(this.energy <=75 ){            
+            this.energy += 25
+        } 
+        if(this.hungry <=50){
+            this.hungry +=50
         }      
     }
 
     play(){
-      if (this.energy == 0){
-        return "Estoy cansad@, no tengo energia,necesito Dormir"
-        } else {
-        this.mood = "meow!! Estoy feliz, gracias por jugar conmigo!!"
-        this.energy -= 50
+        if (this.energy >= 50) {
+            this.mood = "meow!! Estoy feliz, gracias por jugar conmigo!!"
+            this.energy -= 50
+            this.hungry += 50
         } 
     }
     
     feed(){
-        if (this.hungry == 100){
-            return "mmmm que llenit@ estoy, no tengo hambre"
-        }else {
-            this.energy -= 30
-            this.hungry -= 40
-            return "gracias por la comida"
+        if (this.hungry <= 60){          
+            this.energy += 25
+            this.hungry -= 50
+          }              
         }
     }
-
-    speak(){
-        
-    }
-
-  }
-  const pablo = new cat
+   
+    
+  
+ /*  const pablo = new cat
 
   console.log(pablo)
   pablo.play
-  console.log(pablo.energy)
+  console.log(pablo.energy) */

@@ -1,9 +1,10 @@
+const gato = new cat
+
 function init(){
     const name = document.getElementById("name").value;
     document.getElementById("text-name").innerHTML = name;
-       
+    
     if (name.length){
-
         const auth =  document.getElementById("auth");
         const button_sleep =  document.getElementById("button_sleep");
         const button_eat =  document.getElementById("button_eat");
@@ -38,7 +39,10 @@ function init(){
         button_eat.removeAttribute("hidden");               
         button_play.removeAttribute("hidden");            
         button_sound.removeAttribute("hidden");
-        restablecer.removeAttribute("hidden");       
+        restablecer.removeAttribute("hidden"); 
+    
+        gato.name = name
+        
 
     } else{
         alert("Escribe un Nombre para poder iniciar el Juego")
@@ -46,10 +50,10 @@ function init(){
     
 }
 
+
 function clean(){
-    const auth =  document.getElementById("auth");
-    auth.style.visibility = 'visible';    
-   
+    
+    const auth =  document.getElementById("auth")     
     const button_sleep =  document.getElementById("button_sleep");
     const button_eat =  document.getElementById("button_eat");
     const text_name =  document.getElementById("text-name");
@@ -63,32 +67,72 @@ function clean(){
     const separador1 =  document.getElementById("separador1");
     const separador2 =  document.getElementById("separador2");
    
-        text_name.style.visibility = 'hidden';
+        auth.style.visibility = 'visible';  
 
-        energy.style.visibility = 'hidden';  
-        hungry.style.visibility = 'hidden';  
-        sleep.style.visibility = 'hidden';  
-        number1.style.visibility = 'hidden';  
-        number2.style.visibility = 'hidden';
-        number3.style.visibility = 'hidden';
-        separador1.style.visibility = 'hidden';
-        separador2.style.visibility = 'hidden';
+        text_name.hidden = true;
+        energy.hidden = true;  
+        hungry.hidden = true;  
+        sleep.hidden = true;  
+        number1.hidden = true;  
+        number2.hidden = true;
+        number3.hidden = true;
+        separador1.hidden = true;
+        separador2.hidden = true;
 
-        button_sleep.style.visibility = 'hidden';
-        button_eat.style.visibility = 'hidden';
-        button_play.style.visibility = 'hidden';
-        button_sound.style.visibility = 'hidden';
-         
-       
+        button_sleep.hidden = true;
+        button_eat.hidden = true;
+        button_play.hidden = true;
+        button_sound.hidden = true;
+}
+
+const number1 =  document.getElementById("number1"); 
+const number2 =  document.getElementById("number2");
+const number3 =  document.getElementById("number3");
+
+
+function catsleep(){
+   
+    const cat_sleep =  document.getElementById("cat-sleep"); 
+        
+    if (gato.energy == 0){
+    alert("Me tomare una pequeña siesta");
+    cat_sleep.removeAttribute("hidden"); 
+    gato.sleep()
+    }else{
+    cat_sleep.hidden = true;
+    alert("Tengo muuucha energia, Que haremos ahora?")
+    } 
+    number1 = document.getElementById("number1").value;
+    document.getElementById("number1").innerHTML = number1;
+
+}
+
+function catPlay(){  
+
+    const cat_play =  document.getElementById("cat-play");
+
+    if(gato.energy == 0){
+        cat_play.hidden = true;
+        alert("Estoy muyyyy cansado, necesito Dormir") 
+
+    }else{
+        gato.play()
+        cat_play.removeAttribute("hidden");
+        
+    }
 }
     
+function cateat(){
+    const cat_eat =  document.getElementById("cat-eat");
 
-
-
-
-
-
-
-/* cat_eat.removeAttribute("hidden");            
-cat_sleep.removeAttribute("hidden"); 
-cat_play.removeAttribute("hidden");      */
+    if(gato.hungry == 100){
+       cat_eat.removeAttribute("hidden");
+       alert("Tengo mucha hambre nececito mas Comida¡¡¡¡")
+       gato.feed()
+    }
+    if(gato.hungry >= 50){
+        cat_eat.hidden = true;
+        alert("No tengo hambre, que haremos ahora?")
+    }
+        
+}
