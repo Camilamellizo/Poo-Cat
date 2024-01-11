@@ -43,7 +43,6 @@ function init(){
     
 }
 
-
 function clean(){
     
     const auth =  document.getElementById("auth")     
@@ -70,9 +69,6 @@ function clean(){
         button_eat.hidden = true;
         button_play.hidden = true;
 }
-
-
-
 
 function catsleep(){
    
